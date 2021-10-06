@@ -3,12 +3,11 @@
 <p><strong>Address:</strong> <%= @restaurant.address %></p>
 <p><strong>Phone number:</strong> <%= @restaurant.phone_number %></p>
 <p><strong>Category:</strong> <%= @restaurant.category %></p>
-<p><strong>Reviews:</strong> <%= @review.rating %></p>
 <br>
 
 <% @restaurant.reviews.each do |review| %>
-  <%= @review.content %>
-  <%= @review.rating %>
+  <%= review.content %>
+  <%= review.rating %>
 <% end %>
 
 <h2>Review now!</h2>
