@@ -16,7 +16,12 @@
         <td><%= restaurant.address%></td>
         <td><%= restaurant.phone_number%></td>
         <td><%= restaurant.category%></td>
+        <td><%= link_to 'Show details', restaurant %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary" %>

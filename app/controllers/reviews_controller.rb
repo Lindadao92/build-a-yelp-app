@@ -5,14 +5,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    set_restaurant
     @review = Review.new(review_params)
     # we need `restaurant_id` to associate review with corresponding restaurant
+    set_restaurant
     @review.restaurant = @restaurant
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render 'restaurants/new'
+      render :new
     end
   end
 
