@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    set_restaurant
     @review = Review.new(review_params)
     # we need `restaurant_id` to associate review with corresponding restaurant
     @review.restaurant = @restaurant
